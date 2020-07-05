@@ -1,26 +1,71 @@
-# PaperClass
+## 前端
+
+* [登录界面](#登录界面)
+* [笔记页面](#笔记页面)
+* [房间界面](#房间界面)
+* [我的界面](#我的界面)
+
+***
+
+## 登录界面
+
+### 概述
+
+注册：账号通过邮箱进行注册，注册时输入自己的昵称和密码，若昵称有重复，则无法注册，提示更换昵称
+
+登录：使用邮箱进行登录
+
+找回密码：使用邮箱找回密码，并且重新设置密码
+
+第三方登录：待定
+
+### 方法
+
+| 描述        | 返回类型         |
+| ------------- | ------------ |
+| 账号密码登录，验证是否匹配       | Boolean |
+| 注册账号，验证昵称是否重复       | Boolean |
+| 注册账号，将账号添加入数据库       | NULL |
+| 重新设置密码       | NULL |
+
+[返回目录](#前端)
+
+***
+
+## 笔记页面（待定）
+
+[返回目录](#前端)
+
+***
+
+## 房间界面
+
+### 方法
+
+| 描述        | 返回类型         |
+| ------------- | ------------ |
+| 返回用户的类型（老师/学生）       | Boolean |
+| 调节音量大小，前端估计向后端发送一个float，后端保存状态并调节音量的大小       | 看具体后端的实现 |
+| 学生点击举手时，前端向后端发送一个true和举手学生的昵称，后端需要向老师端发送有学生举手的提示和举手学生的昵称       |  |
+| 提供画板       |  |
+| 分享       | 待定 |
+
+[返回目录](#前端)
+
+***
+
+## 我的界面
+
+这个界面的具体内容还未确定，先待定
+
+### 方法
+
+| 描述        | 返回类型         |
+| ------------- | ------------ |
+| 返回用户的昵称       | Boolean |
 
 
-Quick setup — if you’ve done this kind of thing before
-or  
 
-HTTPS https://github.com/MeBigWhite/PaperClass.git  
-SSH  git@github.com:MeBigWhite/PaperClass.git  
-Get started by creating a new file or uploading an existing file.
-We recommend every repository include a README, LICENSE, and .gitignore.
+[返回目录](#前端)
 
-…or create a new repository on the command line
-echo "# PaperClass" >> README.md
-> git init
-  git add README.md
-  git commit -m "first commit"
-  git remote add origin https://github.com/MeBigWhite/PaperClass.git or git@github.com:MeBigWhite/PaperClass.git(for ssh)
-  git push -u origin master
- 
- 
-…or push an existing repository from the command line
-> git remote add origin https://github.com/MeBigWhite/PaperClass.git or git@github.com:MeBigWhite/PaperClass.git(for ssh)
-  git push -u origin master  
-
-…or import code from another repository
-> You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+***
