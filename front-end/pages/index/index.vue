@@ -1,52 +1,23 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+	<view>
+		<web-view :src="allUrl"></web-view>
 	</view>
 </template>
 
 <script>
+	import globalConfig from '@/config'
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				viewerUrl: '/hybrid/html/web/viewer.html',
+				// viewerUrl: globalConfig.baseUrl + '/pdf/web/viewer.html',
+				allUrl: ''
 			}
 		},
-		onLoad() {
-
-		},
-		methods: {
-
+		onLoad(options) {
+			let fileUrl = encodeURIComponent(
+				globalConfig.baseUrl + '/api/attachment?name=' + options.name + '&url=' + options.url)
+			this.allUrl = this.viewerUrl + '?file=' + fileUrl
 		}
 	}
 </script>
-
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
-</style>
